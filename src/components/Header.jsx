@@ -93,7 +93,8 @@ const Header = () => {
                                     className='w-40 bg-gray-50 shadow-xl rounded-lg flex flex-col absolute top-12 right-0'>
                                     {
                                         user && user.email && (
-                                            <Link to={'/createItem'}>
+                                            <Link to={'/createItem'}
+                                             onClick={()=>setIsMenu(false)}>
                                                 <p className='px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100
                                 active:bg-slate-200 transition-all duration-100 ease-in-out text-textColor text-base'>New Item <MdAdd /></p>
                                             </Link>
@@ -158,10 +159,10 @@ const Header = () => {
                                 <ul
 
                                     className='flex flex-col'>
-                                    <li className='text-sm text-textColor cursor-pointer hover:text-headingColor duration-100 transition-all ease-in-out px-4 py-2 hover:bg-slate-100 active:bg-slate-200'>Home</li>
-                                    <li className='text-sm text-textColor cursor-pointer hover:text-headingColor duration-100 transition-all ease-in-out px-4 py-2 hover:bg-slate-100 active:bg-slate-200'>Menu</li>
-                                    <li className='text-sm text-textColor cursor-pointer hover:text-headingColor duration-100 transition-all ease-in-out px-4 py-2 hover:bg-slate-100 active:bg-slate-200'>About</li>
-                                    <li className='text-sm text-textColor cursor-pointer hover:text-headingColor duration-100 transition-all ease-in-out px-4 py-2 hover:bg-slate-100 active:bg-slate-200'>Service</li>
+                                    <li onClick={()=>setIsMenu(false)} className='text-sm text-textColor cursor-pointer hover:text-headingColor duration-100 transition-all ease-in-out px-4 py-2 hover:bg-slate-100 active:bg-slate-200'>Home</li>
+                                    <li onClick={()=>setIsMenu(false)} className='text-sm text-textColor cursor-pointer hover:text-headingColor duration-100 transition-all ease-in-out px-4 py-2 hover:bg-slate-100 active:bg-slate-200'>Menu</li>
+                                    <li onClick={()=>setIsMenu(false)} className='text-sm text-textColor cursor-pointer hover:text-headingColor duration-100 transition-all ease-in-out px-4 py-2 hover:bg-slate-100 active:bg-slate-200'>About</li>
+                                    <li onClick={()=>setIsMenu(false)} className='text-sm text-textColor cursor-pointer hover:text-headingColor duration-100 transition-all ease-in-out px-4 py-2 hover:bg-slate-100 active:bg-slate-200'>Service</li>
                                 </ul>
                                 <p onClick={logoutHandle}
                                     className='px-4 py-2 mt-2 flex items-center justify-center gap-3 cursor-pointer bg-orange-100 hover:bg-orange-200
